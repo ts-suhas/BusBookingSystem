@@ -1,0 +1,79 @@
+
+
+<header class="header-wrapper snipcss-RdNe1" style="background-color: rgb(245, 240, 240);">
+    <div class="header-section section" id="header-section" name="Header">
+      <div class="widget Header" data-version="2" id="Header1">
+        <div class="header-widget">
+          <a class="header-logo-image snip-a" href="/">
+            <img alt="Room Booking Platform"  class="blur-up lazyloading snip-img"  height="72" src="/assets/logo.jfif" width="280">
+  
+          </a>
+        </div>
+      </div>
+      <div class="widget LinkList" data-version="2" id="LinkList99">
+        <div class="menu-widget" id="desktopmenu">
+          <span class="menu-item">
+          </span>
+          <span class="menu-item">
+            <a href="/" class="snip-a">
+              Home
+            </a>
+          </span>
+          <span class="menu-item">
+            <a *ngIf="identity && identity.role == 'client'" href="/my-bookings" class="snip-a">
+              My Bookings
+            </a>
+          </span>
+          <span class="menu-item">
+            <a *ngIf="identity && identity.role == 'admin'"  href="/dashboard" class="snip-a">
+              Dashboard
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/" class="snip-a">
+              Learn More
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/" class="snip-a">
+              About Us
+            </a>
+          </span>
+          <span class="menu-item">
+          </span>
+          <span class="menu-item" *ngIf="!identity">
+            <a href="/login" class="snip-a">
+              <span id="login">
+                Login
+              </span>
+            </a>
+          </span>
+          <span class="menu-item" *ngIf="!identity">
+            <a href="/register" class="snip-a">
+              Sign Up
+            </a>
+          </span>
+          <span class="menu-item dropdown" *ngIf="identity">
+            <span class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/assets/user.png" width="35px" height="35px"> {{ identity && identity.name ? identity.name : 'Peter John' }}
+            </span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">My Account</a></li>
+              <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+            </ul>
+          </span>
+        </div>
+        <button aria-label="Menu" class="button-icon menu snip-button" type="button">
+          <svg height="24" viewBox="0 0 384.97 384.97" width="24">
+            <path d="M12.03,120.303h360.909c6.641,0,12.03-5.39,12.03-12.03c0-6.641-5.39-12.03-12.03-12.03H12.03 c-6.641,0-12.03,5.39-12.03,12.03C0,114.913,5.39,120.303,12.03,120.303z">
+            </path>
+            <path d="M372.939,180.455H12.03c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h360.909c6.641,0,12.03-5.39,12.03-12.03 S379.58,180.455,372.939,180.455z">
+            </path>
+            <path d="M372.939,264.667H132.333c-6.641,0-12.03,5.39-12.03,12.03c0,6.641,5.39,12.03,12.03,12.03h240.606 c6.641,0,12.03-5.39,12.03-12.03C384.97,270.056,379.58,264.667,372.939,264.667z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  

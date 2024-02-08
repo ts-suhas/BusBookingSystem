@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BusBookingWebBackend",
+    "\\BusBookingWebBackend\\BusBookingWebApi",
+    "\\BusBookingWebBackend\\BusBookingWebApi\\Controllers",
+    "\\BusBookingWebBackend\\BusBookingWebApi\\Data",
+    "\\BusBookingWebBackend\\BusBookingWebApi\\Interfaces",
+    "\\BusBookingWebBackend\\BusBookingWebApi\\Properties",
+    "\\BusBookingWebBackend\\BusBookingWebApi\\Services"
+  ],
+  "SelectedNode": "\\BusBookingWebBackend\\BusBookingWebApi\\Data\\TRANSPORTContext.cs",
+  "PreviewInSolutionExplorer": false
+}

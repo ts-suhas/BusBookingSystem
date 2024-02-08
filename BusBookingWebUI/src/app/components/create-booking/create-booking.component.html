@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row p-5">
+        <div class="col-md-4 shadow p-3 mb-5 bg-white rounded">
+            
+            <h2>{{bus.type}}</h2>
+            <img class="card-img-top" [src]="'/assets/bus1.jfif'" alt="Card image cap" width="286px" height="150px">
+            
+
+        </div>
+
+        <div class="col-md-7 offset-1 shadow p-3 mb-5 bg-white rounded">
+            <div class="row">
+                <div class="col-6">
+                    <h5>Route:</h5> <p>Wadham</p>
+
+                </div>
+                <div class="col-6">
+                    <!-- <h5>To:</h5> <p>Sharjah</p>                     -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <span><h5>Ticket Amount:</h5> <p>$20</p></span> 
+
+                </div>
+                <div class="col-6">
+                    <div class="row text-center">
+                        <button class="btn btn-success" (click)="bookTicket(bus.busRoutes[0].brId)">Check Out</button>
+        
+                    </div>
+                    <!-- <span><h5>Arival Time:</h5> <p>05:30 PM (Expected)</p></span>                      -->
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>

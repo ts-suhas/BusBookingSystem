@@ -1,0 +1,71 @@
+
+
+  <div class="row shadow-lg p-3 mb-5 bg-white rounded room-managment">
+    <h3 class="text-center m-4">My Bookings List</h3>
+
+    <div class="table-responsive" *ngIf="tableData && tableData.length">
+      <table datatable class="dataTable" id="example">
+        <thead style="background-color: #2d7ef7; color: white; height: 50px;">
+          <tr>
+            <th>Image</th>
+            <th>Amount</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="spaceUnder" *ngFor="let booking of tableData">
+            <td style="min-width: 180px;"> <img width="40px" height="40px" [src]="getRoomImageById(booking.roomId)"></td>
+            <td style="min-width: 180px;">{{booking.amount | currency }}</td>
+            <td style="min-width: 140px;"> {{booking.location}} <!--{{getRoomTitleById(booking.roomId) }}</td> -->
+            <td style="min-width: 140px;">{{!booking?.date ? '' : booking.date | date }}</td>
+            <td style="min-width: 220px;">{{booking.departureDateTime }}</td>
+            <td  style="min-width: 180px;"><button class="btn btn-primary btn-xs" data-bs-toggle="modal" data-bs-target="#bookingModal" (click)="openEditBookingModal(booking)">Modify</button>
+              <button class="btn btn-danger btn-xs m-2" (click)="deleteBooking(booking)">Refund</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+    <p *ngIf="tableData && !tableData.length">No Booking Found <a href="/">Go Back</a></p>
+
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="roomModalLabel" *ngIf="updateBookingData.roomId != '0'">Update Booking </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeEditBookingModal()"></button>
+      </div>
+      <div class="modal-body">
+        <h4><small>Modify Booking From and To Dates</small></h4>
+        <div class="row">
+          <div class="col">
+            <input type="date" class="form-control" placeholder="size" [(ngModel)]="updateBookingData.fromDate">
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" placeholder="Rent Per Day" [(ngModel)]="updateBookingData.toDate">
+          </div>
+        </div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeEditBookingModal()">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" *ngIf="updateBookingData.roomId != '0'" (click)="updateBooking()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

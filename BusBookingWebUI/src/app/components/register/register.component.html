@@ -1,0 +1,115 @@
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:#F0F5F9; background-size: cover; background-position: center;">
+    <div _ngcontent-uhb-c5="" class="auth-box card snipcss0-0-0-1 snipcss-WLs7J">
+    <div _ngcontent-uhb-c5="" class="align-self-end col-auto snipcss0-1-1-2">
+      <li _ngcontent-uhb-c5="" class="nav-item dropdown snipcss0-2-2-3" ngbdropdown="" placement="bottom-right"
+        style="list-style-type: none">
+        <div _ngcontent-uhb-c5="" class="dropdown-menu user-dd animated snipcss0-3-3-6" ngbdropdownmenu=""
+          x-placement="bottom-right"><span _ngcontent-uhb-c5="" class="with-arrow snipcss0-4-6-7"><span
+              _ngcontent-uhb-c5="" class="bg-primary snipcss0-5-7-8"></span></span>
+          <div _ngcontent-uhb-c5="" class="dropdown-divider snipcss0-4-6-9"></div><a _ngcontent-uhb-c5=""
+            class="dropdown-item ng-star-inserted snipcss0-4-6-10 snip-a" href="javascript:void(0)"><em
+              _ngcontent-uhb-c5="" class="m-r-5 m-l-5 flag-icon flag-icon-us snipcss0-5-10-11"></em> English
+            (US)</a><a _ngcontent-uhb-c5="" class="dropdown-item ng-star-inserted snipcss0-4-6-12 snip-a"
+            href="javascript:void(0)"><em _ngcontent-uhb-c5=""
+              class="m-r-5 m-l-5 flag-icon flag-icon-fr snipcss0-5-12-13"></em> Français</a>
+        </div>
+      </li>
+    </div>
+    <div _ngcontent-uhb-c5="" class="snipcss0-1-1-14">
+      <div _ngcontent-uhb-c5="" class="logo snipcss0-2-14-15"><a href="/" _ngcontent-uhb-c5="" class="db snipcss0-3-15-16"><img
+            _ngcontent-uhb-c5="" alt="logo" src="/assets/logo.jpg" width="220px" height="120px" class="snipcss0-4-16-17 snip-img"></a>
+        <h4 _ngcontent-uhb-c5="" class="font-medium m-t-40 snipcss0-3-15-18 snip-h4"> <b>Signup to Bus Booking System
+          </b> </h4>
+      </div><br><br>
+      <div _ngcontent-uhb-c5="" class="row snipcss0-2-14-19">
+        <div _ngcontent-uhb-c5="" class="col-12 snipcss0-3-19-20">
+          <form _ngcontent-uhb-c5="" class="form-horizontal ng-untouched ng-pristine ng-invalid snipcss0-4-20-21"
+            novalidate="">
+            <div class="row">
+              <div _ngcontent-uhb-c5="" class="col-md-6 snipcss0-6-42-60">
+                <input [(ngModel)]="name" aria-describedby="basic-addon1" aria-label="name"
+                  class="form-control form-control-lg " name="name" type="text" placeholder="Name">
+  
+              </div>
+              <div _ngcontent-uhb-c5="" class="col-md-6 snipcss0-6-42-74">
+  
+                <select class="form-control" (change)="onChangeGender($event)">
+                  <option>-Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div><br>
+            <div _ngcontent-uhb-c5="" class="row snipcss0-5-21-42">
+              <div _ngcontent-plp-c6="" class="col-12 snipcss-bh8w4">
+                <div class="input-group">
+                  <input [(ngModel)]="email" aria-describedby="basic-addon1" aria-label="Email"
+                    class="form-control form-control-lg " name="email" type="text" placeholder=" Email">
+  
+  
+                </div>
+  
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div _ngcontent-uhb-c5="" class="col-md-6 snipcss0-6-42-88">
+  
+                <input [(ngModel)]="password" aria-describedby="basic-addon1" aria-label="Password"
+                  class="form-control form-control-lg ng-untouched " formcontrolname="password" name="password"
+                  type="password" placeholder=" Password">
+  
+              </div>
+              <div _ngcontent-uhb-c5="" class="col-md-6 snipcss0-6-42-102">
+                
+              <input [ngModelOptions]="{standalone: true}" type="checkbox" [(ngModel)]="isMember" class="form-check-input terms-check-box" id="isMember">
+              
+              <span class="mat-checkbox-label snipcss0-9-119-128">
+                <span style="display:none" class="snipcss0-10-128-129">&nbsp;</span> Is Member
+              </span>
+                
+                <select *ngIf="doShowCardTypeSelect" class="form-control" (change)="onChangeCardType($event)">
+                  <option>-Select Type</option>
+                  <option value="1">Student</option>
+                  <option value="2">Employee</option>
+                  <option value="3">Business</option>
+                </select>
+  
+              </div>
+            </div><br> <br>
+            <div class="form-check">
+              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="defaultCheck1" class="form-check-input terms-check-box" type="checkbox" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+  
+                <span class="mat-checkbox-label snipcss0-9-119-128">
+                  <span style="display:none" class="snipcss0-10-128-129">&nbsp;</span> I agree to <a _ngcontent-uhb-c5=""
+                    href="/register" target="_blank" class="snipcss0-10-128-130 snip-a">
+                    Terms &amp; Conditions</a>
+                </span>
+              </label>
+            </div><br _ngcontent-uhb-c5="" class="snipcss0-5-21-131">
+            <div _ngcontent-uhb-c5="" class="row snipcss0-5-21-136">
+              <div _ngcontent-uhb-c5="" class="col text-center ng-star-inserted snipcss0-6-136-137"><button
+                  _ngcontent-uhb-c5="" class="btn btn-block btn-lg btn-info  snipcss0-7-137-138 snip-button"
+                  (click)="signup()" [ngClass]="{'n-cursor-disabled': isFormValidd === true}" [disabled]="!isFormValidd || !defaultCheck1 ">
+                  Create Account </button></div>
+            </div>
+            <div _ngcontent-uhb-c5="" class="form-group m-b-0 m-t-10 border-top p-t-10 snipcss0-5-21-143">
+              <div _ngcontent-uhb-c5="" class="col-sm-12 text-center snipcss0-6-143-144"> Already have an account
+                ? <a _ngcontent-uhb-c5="" class="text-info m-l-5 snipcss0-7-144-145 snip-a"
+                  routerlinkactive="router-link-active" routerLink="/login"><strong _ngcontent-uhb-c5=""
+                    class="snipcss0-8-145-146"> Sign In</strong></a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+    </ngx-spinner>
+  
+  
+  
+  
